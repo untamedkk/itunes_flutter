@@ -59,6 +59,13 @@ class ViewModelScreenSearch extends BaseViewModel {
 
     final _ = await player.setUrl(currentTrack.previewUrl);
 
+    await player.play();
+  }
+
+  @override
+  void onInit() {
+    super.onInit();
+
     player.playerStateStream.listen((event) {
       playerState.value = event;
       switch (event.processingState) {
@@ -75,13 +82,6 @@ class ViewModelScreenSearch extends BaseViewModel {
           break;
       }
     });
-
-    await player.play();
-  }
-
-  @override
-  void onInit() {
-    super.onInit();
   }
 
   @override
