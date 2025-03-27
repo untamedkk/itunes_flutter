@@ -6,11 +6,20 @@ Flutter iTunes Search
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Create a new Folder named ".env" on the root of the project and inside the folder create a file
+named "development.env" and add the following content:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+BASE_URL=https://itunes.apple.com/
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+In order to run the app, run the following command:
+
+flutter run --dart-define-from-file=.env/development.env
+
+Or
+
+Edit the run configuration in Android Studio to point to the .env file.
+
+- Go to Run -> Edit Configurations ->
+- Add the "--dart-define-from-file=.env/development.env" in the "Additional run args" field.
