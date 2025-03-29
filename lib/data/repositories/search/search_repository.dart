@@ -27,7 +27,6 @@ class SearchRepository {
       return BaseResponse.complete(searchResult);
     } catch (e) {
       // Handle error in more specific way
-      print('Krishna is error ${e}');
       return BaseResponse.error<MusicSearchResult>(statusCode: 500);
     }
   }

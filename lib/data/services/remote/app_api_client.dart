@@ -98,7 +98,7 @@ class AppInterceptors extends Interceptor {
   }
 }
 
-class BadRequestException extends AskloraApiClientException {
+class BadRequestException extends AppApiClientException {
   BadRequestException(super.r);
 
   @override
@@ -107,7 +107,7 @@ class BadRequestException extends AskloraApiClientException {
   }
 }
 
-class ConflictException extends AskloraApiClientException {
+class ConflictException extends AppApiClientException {
   ConflictException(super.r);
 
   @override
@@ -116,7 +116,7 @@ class ConflictException extends AskloraApiClientException {
   }
 }
 
-class UnauthorizedException extends AskloraApiClientException {
+class UnauthorizedException extends AppApiClientException {
   UnauthorizedException(super.r);
 
   @override
@@ -125,7 +125,7 @@ class UnauthorizedException extends AskloraApiClientException {
   }
 }
 
-class NotFoundException extends AskloraApiClientException {
+class NotFoundException extends AppApiClientException {
   NotFoundException(super.r);
 
   @override
@@ -134,7 +134,7 @@ class NotFoundException extends AskloraApiClientException {
   }
 }
 
-class ForbiddenException extends AskloraApiClientException {
+class ForbiddenException extends AppApiClientException {
   ForbiddenException(super.r);
 
   @override
@@ -143,7 +143,7 @@ class ForbiddenException extends AskloraApiClientException {
   }
 }
 
-class LegalReasonException extends AskloraApiClientException {
+class LegalReasonException extends AppApiClientException {
   LegalReasonException(super.r);
 
   @override
@@ -152,7 +152,7 @@ class LegalReasonException extends AskloraApiClientException {
   }
 }
 
-class InternalServerErrorException extends AskloraApiClientException {
+class InternalServerErrorException extends AppApiClientException {
   InternalServerErrorException(super.r);
 
   @override
@@ -161,7 +161,7 @@ class InternalServerErrorException extends AskloraApiClientException {
   }
 }
 
-class NotAcceptableException extends AskloraApiClientException {
+class NotAcceptableException extends AppApiClientException {
   NotAcceptableException(super.r);
 
   @override
@@ -170,7 +170,7 @@ class NotAcceptableException extends AskloraApiClientException {
   }
 }
 
-class NoInternetConnectionException extends AskloraApiClientException {
+class NoInternetConnectionException extends AppApiClientException {
   NoInternetConnectionException(super.r);
 
   @override
@@ -179,7 +179,7 @@ class NoInternetConnectionException extends AskloraApiClientException {
   }
 }
 
-class DeadlineExceededException extends AskloraApiClientException {
+class DeadlineExceededException extends AppApiClientException {
   DeadlineExceededException(super.r);
 
   @override
@@ -188,8 +188,8 @@ class DeadlineExceededException extends AskloraApiClientException {
   }
 }
 
-class AskloraApiClientException extends DioException {
-  AskloraApiClientException(RequestOptions r) : super(requestOptions: r);
+class AppApiClientException extends DioException {
+  AppApiClientException(RequestOptions r) : super(requestOptions: r);
 
   @override
   String toString() {
